@@ -7,12 +7,12 @@ agent = Mechanize.new
 login_page = agent.get("http://rubylearning.org/class/login/index.php")
 login_form = login_page.forms.first
 
-#######################################
+############ Login form #################
 login_form['username'] = "your login name"
 login_form['password'] = "your login password" 
 course = "Core Ruby 20th batch"
 teachers = {'India' => 1, 'Japan' => 1, 'United States' => 1}
-#######################################
+#########################################
 
 agent.submit(login_form)
 main_page = agent.get('http://rubylearning.org/class/course/index.php')
